@@ -10,9 +10,9 @@ public class GamepadControls : MonoBehaviour
     public GameObject player2;
     Health healthScript;
 
-    public bool attacked;
-    public bool dodged;
-    public bool stalled;
+    public bool attacked = false;
+    public bool dodged = false;
+    public bool stalled = false;
 
     void Awake()
     {
@@ -31,22 +31,17 @@ public class GamepadControls : MonoBehaviour
 
     void DoesDamage()
     {
-        healthScript.health -= 1;
-        Debug.Log("does damage");
-
         attacked = true;
     }
 
     void DoesDodge()
     {
         dodged = true;
-        Debug.Log("does dodge");
     }
 
     void DoesStall()
     {
         stalled = true;
-        Debug.Log("does stall");
     }
 
     void OnEnable()
