@@ -7,10 +7,13 @@ public class NoteScroll : MonoBehaviour
     public Rigidbody2D selfRB;
     public bool noteCheck;
     public float time;
+    public MusicSync musicStart;
+    //Note Scroll Speed (does not effect rythm);
+    public float NSS;
     // Start is called before the first frame update
     void Start()
     {
-        selfRB.velocity = new Vector2(5,0);
+        selfRB.velocity = new Vector2(NSS, 0);
     }
 
     // Update is called once per frame
@@ -38,7 +41,16 @@ public class NoteScroll : MonoBehaviour
         {
             noteCheck = true;
 
-            Debug.Log("Collided");
+            //Debug.Log("Collided");
+        }
+
+        if (collision.CompareTag("SongBegin"))
+        {
+            if (musicStart.hasStarted == false)
+            {
+                musicStart.testSong.Play();
+                musicStart.hasStarted = true;
+            }
         }
     }
 

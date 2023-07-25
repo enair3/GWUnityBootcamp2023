@@ -40,16 +40,18 @@ public class MusicSync : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-
-        if (timer >= 1.33 && hasStarted == false)
+        /*
+        if (timer >= 1.5 && hasStarted == false)
         {
             testSong.Play();
             hasStarted = true;
         }
+        */
         noteCreator -= Time.deltaTime;
 
         if (testSong.isPlaying)
         {
+        }
             //sets song time to the actual value for time since song started
             songTime = testSong.time;
 
@@ -67,7 +69,6 @@ public class MusicSync : MonoBehaviour
                 noteSpawner.createNote();
                 beatsBeforeSpawn = 2;
             }
-        }
         }
     }
 }
