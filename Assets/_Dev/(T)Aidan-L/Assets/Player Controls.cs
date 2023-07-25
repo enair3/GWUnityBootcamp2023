@@ -46,7 +46,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Stall (Charge)"",
+                    ""name"": ""Stall"",
                     ""type"": ""Button"",
                     ""id"": ""3e7e26d6-93e3-4c19-be7a-d1962957fbd0"",
                     ""expectedControlType"": ""Button"",
@@ -85,7 +85,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Stall (Charge)"",
+                    ""action"": ""Stall"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -98,7 +98,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Fighting = asset.FindActionMap("Fighting", throwIfNotFound: true);
         m_Fighting_Attack = m_Fighting.FindAction("Attack", throwIfNotFound: true);
         m_Fighting_Dodge = m_Fighting.FindAction("Dodge", throwIfNotFound: true);
-        m_Fighting_StallCharge = m_Fighting.FindAction("Stall (Charge)", throwIfNotFound: true);
+        m_Fighting_Stall = m_Fighting.FindAction("Stall", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -160,14 +160,14 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private IFightingActions m_FightingActionsCallbackInterface;
     private readonly InputAction m_Fighting_Attack;
     private readonly InputAction m_Fighting_Dodge;
-    private readonly InputAction m_Fighting_StallCharge;
+    private readonly InputAction m_Fighting_Stall;
     public struct FightingActions
     {
         private @PlayerControls m_Wrapper;
         public FightingActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Attack => m_Wrapper.m_Fighting_Attack;
         public InputAction @Dodge => m_Wrapper.m_Fighting_Dodge;
-        public InputAction @StallCharge => m_Wrapper.m_Fighting_StallCharge;
+        public InputAction @Stall => m_Wrapper.m_Fighting_Stall;
         public InputActionMap Get() { return m_Wrapper.m_Fighting; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -183,9 +183,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Dodge.started -= m_Wrapper.m_FightingActionsCallbackInterface.OnDodge;
                 @Dodge.performed -= m_Wrapper.m_FightingActionsCallbackInterface.OnDodge;
                 @Dodge.canceled -= m_Wrapper.m_FightingActionsCallbackInterface.OnDodge;
-                @StallCharge.started -= m_Wrapper.m_FightingActionsCallbackInterface.OnStallCharge;
-                @StallCharge.performed -= m_Wrapper.m_FightingActionsCallbackInterface.OnStallCharge;
-                @StallCharge.canceled -= m_Wrapper.m_FightingActionsCallbackInterface.OnStallCharge;
+                @Stall.started -= m_Wrapper.m_FightingActionsCallbackInterface.OnStall;
+                @Stall.performed -= m_Wrapper.m_FightingActionsCallbackInterface.OnStall;
+                @Stall.canceled -= m_Wrapper.m_FightingActionsCallbackInterface.OnStall;
             }
             m_Wrapper.m_FightingActionsCallbackInterface = instance;
             if (instance != null)
@@ -196,9 +196,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Dodge.started += instance.OnDodge;
                 @Dodge.performed += instance.OnDodge;
                 @Dodge.canceled += instance.OnDodge;
-                @StallCharge.started += instance.OnStallCharge;
-                @StallCharge.performed += instance.OnStallCharge;
-                @StallCharge.canceled += instance.OnStallCharge;
+                @Stall.started += instance.OnStall;
+                @Stall.performed += instance.OnStall;
+                @Stall.canceled += instance.OnStall;
             }
         }
     }
@@ -207,6 +207,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     {
         void OnAttack(InputAction.CallbackContext context);
         void OnDodge(InputAction.CallbackContext context);
-        void OnStallCharge(InputAction.CallbackContext context);
+        void OnStall(InputAction.CallbackContext context);
     }
 }

@@ -9,26 +9,27 @@ public class Attack : MonoBehaviour
 
     public GameObject player2;
     Health healthScript;
-    int health;
+
+    public bool attacked;
 
     void Awake()
     {
         controls = new PlayerControls();
 
-        controls.Fighting.Attack.performed += ctx => Damage();
+        controls.Fighting.Attack.performed += ctx => DoesDamage();
 
 
         player2 = GameObject.Find("Player2");
 
         healthScript = player2.GetComponent<Health>();
-
-        health = healthScript.health;
     }
 
-    void Damage()
+    void DoesDamage()
     {
-        health -= 1;
+        healthScript.health -= 1;
         Debug.Log("does damage");
+
+        attacked = true;
     }
 
     void OnEnable()
