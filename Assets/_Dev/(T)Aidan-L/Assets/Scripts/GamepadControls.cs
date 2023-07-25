@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Attack : MonoBehaviour
+public class GamepadControls : MonoBehaviour
 {
     PlayerControls controls;
 
@@ -11,6 +11,8 @@ public class Attack : MonoBehaviour
     Health healthScript;
 
     public bool attacked;
+    public bool dodged;
+    public bool stalled;
 
     void Awake()
     {
@@ -18,6 +20,9 @@ public class Attack : MonoBehaviour
 
         controls.Fighting.Attack.performed += ctx => DoesDamage();
 
+        controls.Fighting.Dodge.performed += ctx => DoesDodge();
+
+        controls.Fighting.Stall.performed += ctx => DoesStall();
 
         player2 = GameObject.Find("Player2");
 
@@ -30,6 +35,18 @@ public class Attack : MonoBehaviour
         Debug.Log("does damage");
 
         attacked = true;
+    }
+
+    void DoesDodge()
+    {
+        dodged = true;
+        Debug.Log("does dodge");
+    }
+
+    void DoesStall()
+    {
+        stalled = true;
+        Debug.Log("does stall");
     }
 
     void OnEnable()

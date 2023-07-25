@@ -399,9 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974677782}
   - component: {fileID: 1974677781}
-  - component: {fileID: 1974677783}
-  - component: {fileID: 1974677785}
-  - component: {fileID: 1974677784}
+  - component: {fileID: 1974677786}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -476,7 +474,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1974677783
+--- !u!114 &1974677786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -490,29 +488,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player2: {fileID: 1254989462}
   attacked: 0
---- !u!114 &1974677784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974677779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5420ebfa4ccac1f4a8ca86fc24bf9b82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stalled: 0
---- !u!114 &1974677785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974677779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac2543a137b30f4eba87ca4cb14a50c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   dodged: 0
+  stalled: 0
