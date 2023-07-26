@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class OutcomeDecider : MonoBehaviour
 {
-    public GameObject player1;
-    public GameObject player2;
+    public GameObject player1; //set in inspector
+    public GameObject player2; //set in inspector
 
     GamepadControls gamepadControlsP1;
     GamepadControls gamepadControlsP2;
@@ -16,9 +16,11 @@ public class OutcomeDecider : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        //sets the two variables to the GamepadControls components on the player 1 and player 2 objects
         gamepadControlsP1 = player1.GetComponent<GamepadControls>();
         gamepadControlsP2 = player2.GetComponent<GamepadControls>();
 
+        //sets the two variables to the Health components on the player 1 and player 2 objects
         healthP1 = player1.GetComponent<Health>();
         healthP2 = player2.GetComponent<Health>();
     }
@@ -26,6 +28,7 @@ public class OutcomeDecider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //all possible things that could happen
         if (gamepadControlsP1.attacked == true && gamepadControlsP2.attacked == true)
         {
             healthP1.health -= 1;
