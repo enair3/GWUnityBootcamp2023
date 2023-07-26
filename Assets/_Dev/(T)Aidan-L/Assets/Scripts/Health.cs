@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int health;
+    public int health; //set in Inspector
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (health <= 0) //when player loses all health, destroy player
         {
             Destroy(gameObject);
         }
