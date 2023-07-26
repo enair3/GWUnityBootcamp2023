@@ -46,7 +46,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Stall"",
+                    ""name"": ""Charge"",
                     ""type"": ""Button"",
                     ""id"": ""3e7e26d6-93e3-4c19-be7a-d1962957fbd0"",
                     ""expectedControlType"": ""Button"",
@@ -69,23 +69,23 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""4ca24f74-5328-4ead-bb00-500081457e36"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player1;Player2"",
+                    ""action"": ""Charge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""4eca943d-7d5f-4181-a4c8-88951000e86f"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Player1;Player2"",
                     ""action"": ""Dodge"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4ca24f74-5328-4ead-bb00-500081457e36"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Player1;Player2"",
-                    ""action"": ""Stall"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -121,7 +121,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Fighting = asset.FindActionMap("Fighting", throwIfNotFound: true);
         m_Fighting_Attack = m_Fighting.FindAction("Attack", throwIfNotFound: true);
         m_Fighting_Dodge = m_Fighting.FindAction("Dodge", throwIfNotFound: true);
-        m_Fighting_Stall = m_Fighting.FindAction("Stall", throwIfNotFound: true);
+        m_Fighting_Charge = m_Fighting.FindAction("Charge", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -183,14 +183,14 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private IFightingActions m_FightingActionsCallbackInterface;
     private readonly InputAction m_Fighting_Attack;
     private readonly InputAction m_Fighting_Dodge;
-    private readonly InputAction m_Fighting_Stall;
+    private readonly InputAction m_Fighting_Charge;
     public struct FightingActions
     {
         private @PlayerControls m_Wrapper;
         public FightingActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Attack => m_Wrapper.m_Fighting_Attack;
         public InputAction @Dodge => m_Wrapper.m_Fighting_Dodge;
-        public InputAction @Stall => m_Wrapper.m_Fighting_Stall;
+        public InputAction @Charge => m_Wrapper.m_Fighting_Charge;
         public InputActionMap Get() { return m_Wrapper.m_Fighting; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -206,9 +206,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Dodge.started -= m_Wrapper.m_FightingActionsCallbackInterface.OnDodge;
                 @Dodge.performed -= m_Wrapper.m_FightingActionsCallbackInterface.OnDodge;
                 @Dodge.canceled -= m_Wrapper.m_FightingActionsCallbackInterface.OnDodge;
-                @Stall.started -= m_Wrapper.m_FightingActionsCallbackInterface.OnStall;
-                @Stall.performed -= m_Wrapper.m_FightingActionsCallbackInterface.OnStall;
-                @Stall.canceled -= m_Wrapper.m_FightingActionsCallbackInterface.OnStall;
+                @Charge.started -= m_Wrapper.m_FightingActionsCallbackInterface.OnCharge;
+                @Charge.performed -= m_Wrapper.m_FightingActionsCallbackInterface.OnCharge;
+                @Charge.canceled -= m_Wrapper.m_FightingActionsCallbackInterface.OnCharge;
             }
             m_Wrapper.m_FightingActionsCallbackInterface = instance;
             if (instance != null)
@@ -219,9 +219,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Dodge.started += instance.OnDodge;
                 @Dodge.performed += instance.OnDodge;
                 @Dodge.canceled += instance.OnDodge;
-                @Stall.started += instance.OnStall;
-                @Stall.performed += instance.OnStall;
-                @Stall.canceled += instance.OnStall;
+                @Charge.started += instance.OnCharge;
+                @Charge.performed += instance.OnCharge;
+                @Charge.canceled += instance.OnCharge;
             }
         }
     }
@@ -248,6 +248,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     {
         void OnAttack(InputAction.CallbackContext context);
         void OnDodge(InputAction.CallbackContext context);
-        void OnStall(InputAction.CallbackContext context);
+        void OnCharge(InputAction.CallbackContext context);
     }
 }

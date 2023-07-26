@@ -31,10 +31,12 @@ public class OutcomeDecider : MonoBehaviour
         //all possible things that could happen
         if (gamepadControlsP1.attacked == true && gamepadControlsP2.attacked == true)
         {
-            healthP1.health -= 1;
-            healthP2.health -= 1;
+            healthP1.health -= gamepadControlsP2.chargeAmount;
+            healthP2.health -= gamepadControlsP1.chargeAmount;
             gamepadControlsP1.attacked = false;
             gamepadControlsP2.attacked = false;
+            gamepadControlsP1.chargeAmount = 1;
+            gamepadControlsP2.chargeAmount = 1;
         }
 
         else if (gamepadControlsP1.attacked == true && gamepadControlsP2.dodged == true)
@@ -43,11 +45,12 @@ public class OutcomeDecider : MonoBehaviour
             gamepadControlsP2.dodged = false;
         }
 
-        else if (gamepadControlsP1.attacked == true && gamepadControlsP2.stalled == true)
+        else if (gamepadControlsP1.attacked == true && gamepadControlsP2.charged == true)
         {
-            healthP2.health -= 1;
+            healthP2.health -= gamepadControlsP1.chargeAmount;
             gamepadControlsP1.attacked = false;
-            gamepadControlsP2.stalled = false;
+            gamepadControlsP2.charged = false;
+            gamepadControlsP1.chargeAmount = 1;
         }
 
         else if (gamepadControlsP1.dodged == true && gamepadControlsP2.attacked == true)
@@ -62,29 +65,30 @@ public class OutcomeDecider : MonoBehaviour
             gamepadControlsP2.dodged = false;
         }
 
-        else if (gamepadControlsP1.dodged == true && gamepadControlsP2.stalled == true)
+        else if (gamepadControlsP1.dodged == true && gamepadControlsP2.charged == true)
         {
             gamepadControlsP1.dodged = false;
-            gamepadControlsP2.stalled = false;
+            gamepadControlsP2.charged = false;
         }
 
-        else if (gamepadControlsP1.stalled == true && gamepadControlsP2.attacked == true)
+        else if (gamepadControlsP1.charged == true && gamepadControlsP2.attacked == true)
         {
-            healthP1.health -= 1;
-            gamepadControlsP1.stalled = false;
+            healthP1.health -= gamepadControlsP2.chargeAmount;
+            gamepadControlsP1.charged = false;
             gamepadControlsP2.attacked = false;
+            gamepadControlsP2.chargeAmount = 1;
         }
 
-        else if (gamepadControlsP1.stalled == true && gamepadControlsP2.dodged == true)
+        else if (gamepadControlsP1.charged == true && gamepadControlsP2.dodged == true)
         {
-            gamepadControlsP1.stalled = false;
+            gamepadControlsP1.charged = false;
             gamepadControlsP2.dodged = false;
         }
 
-        else if (gamepadControlsP1.stalled == true && gamepadControlsP2.stalled == true)
+        else if (gamepadControlsP1.charged == true && gamepadControlsP2.charged == true)
         {
-            gamepadControlsP1.stalled = false;
-            gamepadControlsP2.stalled = false;
+            gamepadControlsP1.charged = false;
+            gamepadControlsP2.charged = false;
         }
     }
 }

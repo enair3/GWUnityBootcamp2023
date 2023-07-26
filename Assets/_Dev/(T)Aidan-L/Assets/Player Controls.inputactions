@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Stall",
+                    "name": "Charge",
                     "type": "Button",
                     "id": "3e7e26d6-93e3-4c19-be7a-d1962957fbd0",
                     "expectedControlType": "Button",
@@ -47,23 +47,23 @@
                 },
                 {
                     "name": "",
+                    "id": "4ca24f74-5328-4ead-bb00-500081457e36",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player1;Player2",
+                    "action": "Charge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4eca943d-7d5f-4181-a4c8-88951000e86f",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Player1;Player2",
                     "action": "Dodge",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4ca24f74-5328-4ead-bb00-500081457e36",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Player1;Player2",
-                    "action": "Stall",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
