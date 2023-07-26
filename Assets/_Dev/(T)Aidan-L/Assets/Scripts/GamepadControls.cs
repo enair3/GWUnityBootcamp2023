@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 public class GamepadControls : MonoBehaviour
 {
     public GameObject player;
-    Health health;
 
     public bool attacked = false;
     public bool dodged = false;
@@ -16,32 +15,29 @@ public class GamepadControls : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        health = player.GetComponent<Health>();
+        
     }
 
-    public void DoesAttack(InputAction.CallbackContext cxt)
+    public void DoesAttack(InputAction.CallbackContext cxt) //when player clicks attack button (B), attacked variable becomes true
     {
         if (cxt.performed)
         {
-            Debug.Log("Attacked");
             attacked = true;
         }
     }
 
-    public void DoesDodge(InputAction.CallbackContext cxt)
+    public void DoesDodge(InputAction.CallbackContext cxt) //when player clicks dodge button (X), dodged variable becomes true
     {
         if (cxt.performed)
         {
-            Debug.Log("Dodged");
             dodged = true;
         }
     }
 
-    public void DoesStall(InputAction.CallbackContext cxt)
+    public void DoesStall(InputAction.CallbackContext cxt) //when player clicks stall button (A), stalled variable becomes true
     {
         if (cxt.performed)
         {
-            Debug.Log("Stalled");
             stalled = true;
         }
     }
