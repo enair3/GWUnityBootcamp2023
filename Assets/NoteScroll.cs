@@ -10,6 +10,7 @@ public class NoteScroll : MonoBehaviour
     public MusicSync musicStart;
     //Note Scroll Speed (does not effect rythm);
     public float NSS;
+    public bool hasCrossedBorder;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,6 @@ public class NoteScroll : MonoBehaviour
         {
             if (noteCheck == true)
             {
-                print(time);
                 Destroy(gameObject);
             }
         }
@@ -42,6 +42,11 @@ public class NoteScroll : MonoBehaviour
             noteCheck = true;
 
             //Debug.Log("Collided");
+        }
+
+        if (collision.CompareTag("Border"))
+        {
+            hasCrossedBorder = true;
         }
 
         if (collision.CompareTag("SongBegin"))

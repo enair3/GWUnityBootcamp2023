@@ -67,7 +67,7 @@ public class MusicSync : MonoBehaviour
             if (beatsBeforeSpawn <= 0)
             {
                 noteSpawner.createNote();
-                beatsBeforeSpawn = 2;
+                beatsBeforeSpawn = 1;
             }
         }
     }
