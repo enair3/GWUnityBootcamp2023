@@ -3,50 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterController))]
 public class GamepadControls : MonoBehaviour
 {
-    PlayerControls controls;
+    public GameObject player;
+    Health health;
 
-    public bool attacked = false; //creates the "attacked" boolean and sets it to false
-    public bool dodged = false; //creates the "dodged" boolean and sets it to false
-    public bool stalled = false; //creates the "stalled" boolean and sets it to false
+    public bool attacked = false;
+    public bool dodged = false;
+    public bool stalled = false;
 
+    // Start is called before the first frame update
     void Awake()
     {
-        controls = new PlayerControls();
-
-        //when the attack button (B) is pressed, does DoesDamage
-        controls.Fighting.Attack.performed += ctx => DoesDamage();
-
-        //when the dodge button (X) is pressed, does DoesDodge
-        controls.Fighting.Dodge.performed += ctx => DoesDodge();
-
-        //when the stall button (A) is pressed, does DoesStall
-        controls.Fighting.Stall.performed += ctx => DoesStall();
+        health = player.GetComponent<Health>();
     }
 
-    void DoesDamage() //sets "attacked" to true
+    public void DoesAttack(InputAction.CallbackContext cxt)
     {
-        attacked = true;
+        if (cxt.performed)
+        {
+            Debug.Log("Attacked");
+            attacked = true;
+        }
     }
 
-    void DoesDodge() //sets "dodged" to true
+    public void DoesDodge(InputAction.CallbackContext cxt)
     {
-        dodged = true;
+        if (cxt.performed)
+        {
+            Debug.Log("Dodged");
+            dodged = true;
+        }
     }
 
-    void DoesStall() //sets "stalled" to true
+    public void DoesStall(InputAction.CallbackContext cxt)
     {
-        stalled = true;
+        if (cxt.performed)
+        {
+            Debug.Log("Stalled");
+            stalled = true;
+        }
     }
 
-    void OnEnable()
+    // Update is called once per frame
+    void Update()
     {
-        controls.Fighting.Enable();
-    }
-
-    void OnDisable()
-    {
-        controls.Fighting.Disable();
+        
     }
 }
