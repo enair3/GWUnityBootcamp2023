@@ -101,6 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  attacked: 0
+  dodged: 0
+  charged: 0
 --- !u!114 &8244245108473052202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +164,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8244245108473052203}
-        m_TargetAssemblyTypeName: GamepadControls2, Assembly-CSharp
-        m_MethodName: DoesStall
+        m_TargetAssemblyTypeName: GamepadControls, Assembly-CSharp
+        m_MethodName: DoesCharge
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

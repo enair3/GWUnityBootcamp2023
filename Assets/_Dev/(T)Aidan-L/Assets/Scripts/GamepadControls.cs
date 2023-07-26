@@ -10,7 +10,9 @@ public class GamepadControls : MonoBehaviour
 
     public bool attacked = false;
     public bool dodged = false;
-    public bool stalled = false;
+    public bool charged = false;
+
+    public int chargeAmount = 1;
 
     // Start is called before the first frame update
     void Awake()
@@ -34,11 +36,12 @@ public class GamepadControls : MonoBehaviour
         }
     }
 
-    public void DoesStall(InputAction.CallbackContext cxt) //when player clicks stall button (A), stalled variable becomes true
+    public void DoesCharge(InputAction.CallbackContext cxt) //when player clicks stall button (A), stalled variable becomes true
     {
         if (cxt.performed)
         {
-            stalled = true;
+            chargeAmount += 1;
+            charged = true;
         }
     }
 
