@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Beat them up is rythm fighter game where every beat you can do one of
+  m_text: "Beat them up is rhythm fighter game where every beat you can do one of
     three actions: attack, dodge, stall. \n\nAttacking deals damage to the enemy,
     but you lose your next action if you are dodged\n\nDodge avoids the attack, but
     you lose your next action if you don't dodge an attack\n\nYou can press nothing
@@ -1107,7 +1107,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.7
+  m_fontSize: 19.3
   m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 1
