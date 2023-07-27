@@ -11,16 +11,20 @@ public class NoteScroll : MonoBehaviour
     //Note Scroll Speed (does not effect rythm);
     public float NSS;
     public bool hasCrossedBorder;
+    public string keyCode;
+
     // Start is called before the first frame update
     void Start()
     {
+        musicStart = FindObjectOfType<MusicSync>();
+
         selfRB.velocity = new Vector2(NSS, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("z"))
+        if (Input.GetKeyDown(keyCode))
         {
             if (noteCheck == true)
             {
@@ -30,8 +34,8 @@ public class NoteScroll : MonoBehaviour
         time += Time.deltaTime;
     }
 
-	public void OnTriggerEnter2D(Collider2D collision)
-	{
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.CompareTag("noteDestroy"))
         {
             Destroy(gameObject);
@@ -43,18 +47,20 @@ public class NoteScroll : MonoBehaviour
 
             //Debug.Log("Collided");
         }
-
+        /*
         if (collision.CompareTag("Border"))
         {
             hasCrossedBorder = true;
         }
-
+        */
         if (collision.CompareTag("SongBegin"))
         {
+            //Debug.Log("Play");
             if (musicStart.hasStarted == false)
             {
                 musicStart.testSong.Play();
                 musicStart.hasStarted = true;
+                Debug.Log("Play");
             }
         }
     }
@@ -67,3 +73,5 @@ public class NoteScroll : MonoBehaviour
         }
     }
 }
+
+
