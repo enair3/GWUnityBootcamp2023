@@ -24,6 +24,7 @@ public class GamepadControls : MonoBehaviour
     {
         if (cxt.performed)
         {
+            Debug.Log("attacked");
             attacked = true;
         }
     }
@@ -32,6 +33,7 @@ public class GamepadControls : MonoBehaviour
     {
         if (cxt.performed)
         {
+            Debug.Log("dodged");
             dodged = true;
         }
     }
@@ -40,6 +42,7 @@ public class GamepadControls : MonoBehaviour
     {
         if (cxt.performed)
         {
+            Debug.Log("charged");
             chargeAmount += 1;
             charged = true;
         }
