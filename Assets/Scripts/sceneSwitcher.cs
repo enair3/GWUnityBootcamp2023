@@ -18,6 +18,6 @@ public class sceneSwitcher : MonoBehaviour
         Application.Quit();
     }
     public void goToMainMenu() {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("Menu");
     }
 }
