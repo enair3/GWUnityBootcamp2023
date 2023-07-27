@@ -1,27 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public GameObject player1;
-    public GameObject player2;
-    Health healthp1script;
-    Health healthp2script;
-    int healthp1;
-    int healthp2;
+    public Slider slider;
+    public int health;
 
-    void Awake()
+    public void SetMaxHealth()
     {
-        healthp1script = player1.GetComponent<Health>();
-        healthp2script = player2.GetComponent<Health>();
-        healthp1 = healthp1script.health;
-        healthp1 = healthp1script.health;
+        slider.maxValue = health;
+        slider.value = health;
+    }
+
+    public void SetHealth()
+    {
+        slider.value = health;
     }
 
     void Update()
     {
-        float width = player1.GetComponent<Transform>().scale.x;
-        Vector2.scale(player1.localScale.x * healthp1, player1.localScale.y);
+        slider.value = health;
     }
 }
