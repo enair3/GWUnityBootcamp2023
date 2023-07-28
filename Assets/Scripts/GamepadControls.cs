@@ -12,6 +12,11 @@ public class GamepadControls : MonoBehaviour
 
     public int chargeAmount = 1;
 
+    public int playerSelected;
+
+    public notePlatformCode npcP1;
+    public notePlatformCode npcP2;
+   
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,6 +27,19 @@ public class GamepadControls : MonoBehaviour
     {
         if (cxt.performed)
         {
+            if (npcP1.noteActive == true && playerSelected == 1)
+            {
+                Debug.Log("attacked");
+                attacked = true;
+                npcP2.destroyNote();
+            }
+
+            if (npcP2.noteActive == true && playerSelected == 2)
+            {
+                Debug.Log("attacked");
+                attacked = true;
+                npcP1.destroyNote();
+            }
             Debug.Log("attacked");
             attacked = true;
         }
@@ -31,6 +49,19 @@ public class GamepadControls : MonoBehaviour
     {
         if (cxt.performed)
         {
+            if (npcP1.noteActive == true && playerSelected == 1)
+            {
+                Debug.Log("dodged");
+                dodged = true;
+                npcP2.destroyNote();
+            }
+
+            if (npcP2.noteActive == true && playerSelected == 2)
+            {
+                Debug.Log("dodged");
+                dodged = true;
+                npcP1.destroyNote();
+            }
             Debug.Log("dodged");
             dodged = true;
         }
@@ -40,15 +71,25 @@ public class GamepadControls : MonoBehaviour
     {
         if (cxt.performed)
         {
+            if (npcP1.noteActive == true && playerSelected == 1)
+            {
+                Debug.Log("charged");
+                chargeAmount += 1;
+                charged = true;
+                npcP2.destroyNote();
+            }
+
+            if (npcP2.noteActive == true && playerSelected == 2)
+            {
+                Debug.Log("charged");
+                chargeAmount += 1;
+                charged = true;
+                npcP1.destroyNote();
+            }
             Debug.Log("charged");
             chargeAmount += 1;
             charged = true;
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
