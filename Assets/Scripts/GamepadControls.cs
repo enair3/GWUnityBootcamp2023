@@ -6,8 +6,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class GamepadControls : MonoBehaviour
 {
-    public GameObject player;
-
     public bool attacked = false;
     public bool dodged = false;
     public bool charged = false;
