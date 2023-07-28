@@ -24,13 +24,6 @@ public class NoteScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyCode))
-        {
-            if (noteCheck == true)
-            {
-                Destroy(gameObject);
-            }
-        }
         time += Time.deltaTime;
     }
 
@@ -70,6 +63,14 @@ public class NoteScroll : MonoBehaviour
         if (collision.CompareTag("noteOverlap"))
         {
             noteCheck = false;
+        }
+    }
+
+    public void destroyNote()
+    {
+        if (noteCheck == true)
+        {
+            Destroy(gameObject);
         }
     }
 }
