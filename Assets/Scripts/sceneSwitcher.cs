@@ -20,4 +20,9 @@ public class sceneSwitcher : MonoBehaviour
     public void goToMainMenu() {
         SceneManager.LoadScene("Menu");
     }
+
+    public void goToCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }

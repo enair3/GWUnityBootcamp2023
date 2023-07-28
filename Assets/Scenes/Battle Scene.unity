@@ -148,7 +148,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8244245108473052193, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_Name
-      value: Player2Battle
+      value: Player1Battle
       objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052196, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_RootOrder
@@ -780,8 +780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb08b384aa93732489a4b92c81c91fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 524074888}
   slider: {fileID: 569726459}
-  health: 10
 --- !u!114 &569726459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,8 +945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb08b384aa93732489a4b92c81c91fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1952711274}
   slider: {fileID: 651872551}
-  health: 10
 --- !u!114 &651872551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1541,7 +1541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8244245108473052193, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_Name
-      value: Player1Battle
+      value: Player2Battle
       objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052196, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_RootOrder

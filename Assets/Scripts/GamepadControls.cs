@@ -16,7 +16,7 @@ public class GamepadControls : MonoBehaviour
 
     public notePlatformCode npcP1;
     public notePlatformCode npcP2;
-
+   
     // Start is called before the first frame update
     void Awake()
     {
@@ -40,6 +40,8 @@ public class GamepadControls : MonoBehaviour
                 attacked = true;
                 npcP1.destroyNote();
             }
+            Debug.Log("attacked");
+            attacked = true;
         }
     }
 
@@ -60,6 +62,8 @@ public class GamepadControls : MonoBehaviour
                 dodged = true;
                 npcP1.destroyNote();
             }
+            Debug.Log("dodged");
+            dodged = true;
         }
     }
 
@@ -82,12 +86,10 @@ public class GamepadControls : MonoBehaviour
                 charged = true;
                 npcP1.destroyNote();
             }
+            Debug.Log("charged");
+            chargeAmount += 1;
+            charged = true;
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
