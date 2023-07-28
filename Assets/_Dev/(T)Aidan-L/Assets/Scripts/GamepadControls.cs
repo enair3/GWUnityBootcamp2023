@@ -33,14 +33,14 @@ public class GamepadControls : MonoBehaviour
             {
                 Debug.Log("attacked");
                 attacked = true;
-                npcP1.destroyNote();
+                npcP2.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
                 Debug.Log("attacked");
                 attacked = true;
-                npcP2.destroyNote();
+                npcP1.destroyNote();
             }
         }
     }
@@ -53,14 +53,14 @@ public class GamepadControls : MonoBehaviour
             {
                 Debug.Log("dodged");
                 dodged = true;
-                npcP1.destroyNote();
+                npcP2.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
                 Debug.Log("dodged");
                 dodged = true;
-                npcP2.destroyNote();
+                npcP1.destroyNote();
             }
         }
     }
@@ -74,7 +74,7 @@ public class GamepadControls : MonoBehaviour
                 Debug.Log("charged");
                 chargeAmount += 1;
                 charged = true;
-                npcP1.destroyNote();
+                npcP2.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -82,7 +82,7 @@ public class GamepadControls : MonoBehaviour
                 Debug.Log("charged");
                 chargeAmount += 1;
                 charged = true;
-                npcP2.destroyNote();
+                npcP1.destroyNote();
             }
         }
     }
