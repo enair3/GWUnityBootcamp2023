@@ -25,4 +25,14 @@ public class sceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
+    public void player1Wins()
+    {
+        SceneManager.LoadScene("Player1Win");
+    }
+
+    public void player2Wins()
+    {
+        SceneManager.LoadScene("Player2Win");
+    }
 }
