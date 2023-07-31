@@ -33,8 +33,10 @@ public class OutcomeDecider : MonoBehaviour
         {
             healthP1.health -= gamepadControlsP2.chargeAmount;
             healthP2.health -= gamepadControlsP1.chargeAmount;
+
             gamepadControlsP1.attacked = false;
             gamepadControlsP2.attacked = false;
+
             gamepadControlsP1.chargeAmount = 1;
             gamepadControlsP2.chargeAmount = 1;
         }
@@ -48,9 +50,12 @@ public class OutcomeDecider : MonoBehaviour
         else if (gamepadControlsP1.attacked == true && gamepadControlsP2.charged == true)
         {
             healthP2.health -= gamepadControlsP1.chargeAmount;
+
             gamepadControlsP1.attacked = false;
             gamepadControlsP2.charged = false;
+
             gamepadControlsP1.chargeAmount = 1;
+            gamepadControlsP2.chargeAmount = 1;
         }
 
         else if (gamepadControlsP1.dodged == true && gamepadControlsP2.attacked == true)
@@ -74,8 +79,11 @@ public class OutcomeDecider : MonoBehaviour
         else if (gamepadControlsP1.charged == true && gamepadControlsP2.attacked == true)
         {
             healthP1.health -= gamepadControlsP2.chargeAmount;
+
             gamepadControlsP1.charged = false;
             gamepadControlsP2.attacked = false;
+
+            gamepadControlsP1.chargeAmount = 1;
             gamepadControlsP2.chargeAmount = 1;
         }
 

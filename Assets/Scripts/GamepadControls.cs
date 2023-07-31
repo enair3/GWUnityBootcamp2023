@@ -14,6 +14,8 @@ public class GamepadControls : MonoBehaviour
 
     public int playerSelected;
 
+    public int dodgeDelay = 0;
+
     public notePlatformCode npcP1;
     public notePlatformCode npcP2;
    
@@ -31,39 +33,47 @@ public class GamepadControls : MonoBehaviour
             {
                 Debug.Log("attacked");
                 attacked = true;
-                npcP2.destroyNote();
+                npcP1.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
                 Debug.Log("attacked");
                 attacked = true;
-                npcP1.destroyNote();
+                npcP2.destroyNote();
             }
-            Debug.Log("attacked");
-            attacked = true;
+
+            if (dodgeDelay >= 1)
+            {
+                dodgeDelay -= 1;
+            }
         }
     }
 
     public void DoesDodge(InputAction.CallbackContext cxt) //when player clicks dodge button (X), dodged variable becomes true
     {
-        if (cxt.performed)
+        if (cxt.performed && dodgeDelay == 0)
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
                 Debug.Log("dodged");
                 dodged = true;
-                npcP2.destroyNote();
+                dodgeDelay = 2;
+                npcP1.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
                 Debug.Log("dodged");
                 dodged = true;
-                npcP1.destroyNote();
+                dodgeDelay = 2;
+                npcP2.destroyNote();
             }
-            Debug.Log("dodged");
-            dodged = true;
+
+            if (dodgeDelay >= 1)
+            {
+                dodgeDelay -= 1;
+            }
         }
     }
 
@@ -76,7 +86,7 @@ public class GamepadControls : MonoBehaviour
                 Debug.Log("charged");
                 chargeAmount += 1;
                 charged = true;
-                npcP2.destroyNote();
+                npcP1.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -84,11 +94,13 @@ public class GamepadControls : MonoBehaviour
                 Debug.Log("charged");
                 chargeAmount += 1;
                 charged = true;
-                npcP1.destroyNote();
+                npcP2.destroyNote();
             }
-            Debug.Log("charged");
-            chargeAmount += 1;
-            charged = true;
+
+            if (dodgeDelay >= 1)
+            {
+                dodgeDelay -= 1;
+            }
         }
     }
 
