@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/test.unity
+    path: 
     guid: 82adb39b06faf4184adefe2e872df72d
   - enabled: 1
     path: Assets/Scenes/Menu.unity
@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: bfcdf429132d51d46bfebd633f953bbb
+  - enabled: 1
+    path: Assets/Scenes/Player1Win.unity
+    guid: 1329c35e1f44cca46b929aad1b2741b9
+  - enabled: 1
+    path: Assets/Scenes/Player2Win.unity
+    guid: 5651c4b20b02ff042ad78bfce6c36d0f
   m_configObjects: {}
