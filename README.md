@@ -13,10 +13,3 @@
 
 ## Color Palette
 ![palette](https://github.com/enair3/GWUnityBootcamp2023/assets/122372103/3ebd6447-9acf-4c72-9f31-cd281145d66a)
-<?xml version="1.0" encoding="utf-8"?>
-      <!-- Exported from Coolors.co - https://coolors.co/1151ff-00fefc-ff00f0-9e00ff-000000 -->
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 250" xml:space="preserve">
-        <rect fill="#1151ff" x="0" y="0" width="100" height="220"/>,<rect fill="#00fefc" x="100" y="0" width="100" height="220"/>,<rect fill="#ff00f0" x="200" y="0" width="100" height="220"/>,<rect fill="#9e00ff" x="300" y="0" width="100" height="220"/>,<rect fill="#000000" x="400" y="0" width="100" height="220"/>
-        <text x="10" y="235" font-family="Arial" font-size="6" alignment-baseline="middle">Exported from Coolors.co</text>
-        <text x="490" y="235" font-family="Arial" font-size="6" alignment-baseline="middle" text-anchor="end">https://coolors.co/1151ff-00fefc-ff00f0-9e00ff-000000</text>
-      </svg>
