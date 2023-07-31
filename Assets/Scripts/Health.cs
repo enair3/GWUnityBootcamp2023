@@ -17,6 +17,11 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Invoke("playerDies", 15);
+    }
+
+    void playerDies()
+    {
         if (health <= 0) //when player loses all health, destroy player
         {
             SceneManager.LoadScene(winScreen);
