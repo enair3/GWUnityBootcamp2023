@@ -103,7 +103,7 @@ MonoBehaviour:
   noteCheck: 0
   time: 0
   musicStart: {fileID: 1402461838485025931, guid: 0f5ad977fa5418a438158cdf8f78ff3c, type: 3}
-  NSS: -11
+  NSS: -7
   hasCrossedBorder: 0
   keyCode: x
 --- !u!50 &6519924081305531252
