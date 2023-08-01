@@ -6,14 +6,18 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class GamepadControls : MonoBehaviour
 {
+    //booleans to determine what action the player does
     public bool attacked = false;
-    public bool dodged = false;
+    public bool dodged = false; 
     public bool charged = false;
 
+    //the amount of damage the player does when they attack
     public int chargeAmount = 1;
 
-    public int playerSelected;
+    //which player it is
+    public int playerSelected; 
 
+    //to stop the player from using dodge again directly on the next beat
     public int dodgeDelay = 0;
 
     public notePlatformCode npcP1;
@@ -25,29 +29,33 @@ public class GamepadControls : MonoBehaviour
         
     }
 
-    void Update()
+    //when player clicks attack button (B)
+    public void DoesAttack(InputAction.CallbackContext cxt)
     {
-
-    }
-
-    public void DoesAttack(InputAction.CallbackContext cxt) //when player clicks attack button (B), attacked variable becomes true
-    {
+        //if player clicks the attack button (B)
         if (cxt.performed)
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
                 //Debug.Log("attacked");
+
+                //sets the attacked boolean to true
                 attacked = true;
+
                 npcP1.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
                 //Debug.Log("attacked");
+
+                //sets the attacked button to true
                 attacked = true;
+
                 npcP2.destroyNote();
             }
 
+            //lowers dodge delay by 1 if 1 or higher
             if (dodgeDelay >= 1)
             {
                 dodgeDelay -= 1;
@@ -55,26 +63,39 @@ public class GamepadControls : MonoBehaviour
         }
     }
 
-    public void DoesDodge(InputAction.CallbackContext cxt) //when player clicks dodge button (X), dodged variable becomes true
+    //when player clicks dodge button (X)
+    public void DoesDodge(InputAction.CallbackContext cxt)
     {
+        //if player clicks the dodge button (X) and it isn't on delay
         if (cxt.performed && dodgeDelay == 0)
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
                 //Debug.Log("dodged");
+
+                //sets the dodged boolean to true
                 dodged = true;
+
+                //sets the dodge delay to 2 (goes down by one this beat, so it's only on 1 next beat)
                 dodgeDelay = 2;
+
                 npcP1.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
                 //Debug.Log("dodged");
+
+                //sets the dodged boolean to true
                 dodged = true;
+
+                //sets the dodge delay to 2 (goes down by one this beat, so it's only on 1 next beat)
                 dodgeDelay = 2;
+
                 npcP2.destroyNote();
             }
 
+            //lowers dodge delay by 1 if 1 or higher
             if (dodgeDelay >= 1)
             {
                 dodgeDelay -= 1;
@@ -82,26 +103,39 @@ public class GamepadControls : MonoBehaviour
         }
     }
 
-    public void DoesCharge(InputAction.CallbackContext cxt) //when player clicks stall button (A), stalled variable becomes true
+    //when player clicks charge button (A)
+    public void DoesCharge(InputAction.CallbackContext cxt) 
     {
+        //if player clicks the charge button (A)
         if (cxt.performed)
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
                 //Debug.Log("charged");
+
+                //damage goes up by one (must come first or it doesn't work)
                 chargeAmount += 1;
+
+                //sets the charged boolean to true
                 charged = true;
+
                 npcP1.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
                 //Debug.Log("charged");
+
+                //damage goes up by one (must come first or it doesn't work)
                 chargeAmount += 1;
+
+                //sets the charged boolean to true
                 charged = true;
+
                 npcP2.destroyNote();
             }
 
+            //lowers dodge delay by 1 if 1 or higher
             if (dodgeDelay >= 1)
             {
                 dodgeDelay -= 1;
