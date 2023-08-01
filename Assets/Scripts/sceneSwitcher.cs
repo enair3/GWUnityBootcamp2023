@@ -5,10 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class sceneSwitcher : MonoBehaviour
 {
+    // Button Click SFX Variables
+    public AudioSource source;
+    public AudioClip clip;
+
+    // Remember to add scenes to the build settings or it won't work!
+
     public void playGame()
     {
-        // Replace "test" with your scene
-        // Make sure it's in "Scenes in build" File > Build Settings > and add the scene
+        source.PlayOneShot(clip);
+        // System.Threading.Thread.Sleep(1000);
         SceneManager.LoadScene("Battle Scene");
     }
     public void howToPlay() {
