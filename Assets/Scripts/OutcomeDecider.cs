@@ -28,74 +28,148 @@ public class OutcomeDecider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //all possible things that could happen
-        if (gamepadControlsP1.attacked == true && gamepadControlsP2.attacked == true)
+        //if player 1 attacks
+        if (gamepadControlsP1.attacked == true)
         {
-            healthP1.health -= gamepadControlsP2.chargeAmount;
-            healthP2.health -= gamepadControlsP1.chargeAmount;
-
+            //resets player 1 for next beat
             gamepadControlsP1.attacked = false;
+
+            //if player 2 attacks when player 1 attacks
+            if (gamepadControlsP2.attacked == true)
+            {
+                //player 1 takes damage
+                healthP1.health -= gamepadControlsP2.chargeAmount;
+
+                //player 2 takes damage
+                healthP2.health -= gamepadControlsP1.chargeAmount;
+
+                //resets player 2 for next beat
+                gamepadControlsP2.attacked = false;
+
+                //resets player 2 charge amount
+                gamepadControlsP2.chargeAmount = 1;
+            }
+
+            //if player 2 dodges when player 1 attacks
+            else if (gamepadControlsP2.dodged == true)
+            {
+                //resets player 2 for next beat
+                gamepadControlsP2.dodged = false;
+            }
+
+            //if player 2 charges when player 1 attacks
+            else if (gamepadControlsP2.charged == true)
+            {
+                //player 2 takes damage
+                healthP2.health -= gamepadControlsP1.chargeAmount;
+
+                //resets player 2 for next beat
+                gamepadControlsP2.charged = false;
+
+                //resets player 2 charge amount
+                gamepadControlsP2.chargeAmount = 1;
+            }
+
+            //if player 2 misses the beat when player 1 attacks
+            else if (gamepadControlsP2.attacked == false && gamepadControlsP2.dodged == false && gamepadControlsP2.charged == false)
+            {
+                //player 2 takes damage
+                healthP2.health -= gamepadControlsP1.chargeAmount;
+                
+                //player 2 reset charge amount
+                gamepadControlsP2.chargeAmount = 1;
+            }
+
+            //player 1 reset charge amount
+            gamepadControlsP1.chargeAmount = 1;
+        }
+
+        //if player 1 dodges
+        else if (gamepadControlsP1.dodged == true)
+        {
+            //resets player 1 for next beat
+            gamepadControlsP1.dodged = false;
+
+            //if player 2 attacks when player 1 dodges
+            if (gamepadControlsP2.attacked == true)
+            {
+                //resets player 2 for next beat
+                gamepadControlsP2.attacked = false;
+
+                //player 2 reset charge amount
+                gamepadControlsP2.chargeAmount = 1;
+            }
+
+            //if player 2 dodges when player 1 dodges
+            else if (gamepadControlsP2.dodged == true)
+            {
+                //resets player 2 for next beat
+                gamepadControlsP2.dodged = false;
+            }
+
+            //if player 2 charges when player 1 dodges
+            else if (gamepadControlsP2.charged == true)
+            {
+                //resets player 2 for next beat
+                gamepadControlsP2.charged = false;
+            }
+        }
+
+        //if player 1 charges
+        else if (gamepadControlsP1.charged == true)
+        {
+            //resets player 1 for next beat
+            gamepadControlsP1.charged = false;
+
+            //if player 2 attacks when player 1 charges
+            if (gamepadControlsP2.attacked == true)
+            {
+                //player 2 takes damage
+                healthP1.health -= gamepadControlsP2.chargeAmount;
+
+                //player 1 reset charge amount
+                gamepadControlsP1.chargeAmount = 1;
+
+                //reset player 2 for next beat
+                gamepadControlsP2.attacked = false;
+
+                //player 2 reset charge amount
+                gamepadControlsP2.chargeAmount = 1;
+            }
+
+            //
+            else if (gamepadControlsP2.dodged == true)
+            {
+                gamepadControlsP2.dodged = false;
+            }
+
+            else if (gamepadControlsP2.charged == true)
+            {
+                gamepadControlsP2.charged = false;
+            }
+        }
+
+        else if (gamepadControlsP2.attacked == true)
+        {
             gamepadControlsP2.attacked = false;
 
-            gamepadControlsP1.chargeAmount = 1;
+            if (gamepadControlsP1.attacked == false && gamepadControlsP1.dodged == false && gamepadControlsP1.charged == false)
+            {
+                healthP1.health -= gamepadControlsP2.chargeAmount;
+
+                gamepadControlsP1.chargeAmount = 1;
+            }
+
             gamepadControlsP2.chargeAmount = 1;
         }
 
-        else if (gamepadControlsP1.attacked == true && gamepadControlsP2.dodged == true)
+        else if (gamepadControlsP2.dodged == true)
         {
-            gamepadControlsP1.attacked = false;
             gamepadControlsP2.dodged = false;
         }
 
-        else if (gamepadControlsP1.attacked == true && gamepadControlsP2.charged == true)
+        else if (gamepadControlsP2.charged == true)
         {
-            healthP2.health -= gamepadControlsP1.chargeAmount;
-
-            gamepadControlsP1.attacked = false;
-            gamepadControlsP2.charged = false;
-
-            gamepadControlsP1.chargeAmount = 1;
-            gamepadControlsP2.chargeAmount = 1;
-        }
-
-        else if (gamepadControlsP1.dodged == true && gamepadControlsP2.attacked == true)
-        {
-            gamepadControlsP1.dodged = false;
-            gamepadControlsP2.attacked = false;
-        }
-
-        else if (gamepadControlsP1.dodged == true && gamepadControlsP2.dodged == true)
-        {
-            gamepadControlsP1.dodged = false;
-            gamepadControlsP2.dodged = false;
-        }
-
-        else if (gamepadControlsP1.dodged == true && gamepadControlsP2.charged == true)
-        {
-            gamepadControlsP1.dodged = false;
-            gamepadControlsP2.charged = false;
-        }
-
-        else if (gamepadControlsP1.charged == true && gamepadControlsP2.attacked == true)
-        {
-            healthP1.health -= gamepadControlsP2.chargeAmount;
-
-            gamepadControlsP1.charged = false;
-            gamepadControlsP2.attacked = false;
-
-            gamepadControlsP1.chargeAmount = 1;
-            gamepadControlsP2.chargeAmount = 1;
-        }
-
-        else if (gamepadControlsP1.charged == true && gamepadControlsP2.dodged == true)
-        {
-            gamepadControlsP1.charged = false;
-            gamepadControlsP2.dodged = false;
-        }
-
-        else if (gamepadControlsP1.charged == true && gamepadControlsP2.charged == true)
-        {
-            gamepadControlsP1.charged = false;
             gamepadControlsP2.charged = false;
         }
     }

@@ -18,11 +18,16 @@ public class GamepadControls : MonoBehaviour
 
     public notePlatformCode npcP1;
     public notePlatformCode npcP2;
-   
+
     // Start is called before the first frame update
     void Awake()
     {
         
+    }
+
+    void Update()
+    {
+
     }
 
     public void DoesAttack(InputAction.CallbackContext cxt) //when player clicks attack button (B), attacked variable becomes true
@@ -31,14 +36,14 @@ public class GamepadControls : MonoBehaviour
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
-                Debug.Log("attacked");
+                //Debug.Log("attacked");
                 attacked = true;
                 npcP1.destroyNote();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
-                Debug.Log("attacked");
+                //Debug.Log("attacked");
                 attacked = true;
                 npcP2.destroyNote();
             }
@@ -56,7 +61,7 @@ public class GamepadControls : MonoBehaviour
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
-                Debug.Log("dodged");
+                //Debug.Log("dodged");
                 dodged = true;
                 dodgeDelay = 2;
                 npcP1.destroyNote();
@@ -64,7 +69,7 @@ public class GamepadControls : MonoBehaviour
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
-                Debug.Log("dodged");
+                //Debug.Log("dodged");
                 dodged = true;
                 dodgeDelay = 2;
                 npcP2.destroyNote();
@@ -83,7 +88,7 @@ public class GamepadControls : MonoBehaviour
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
-                Debug.Log("charged");
+                //Debug.Log("charged");
                 chargeAmount += 1;
                 charged = true;
                 npcP1.destroyNote();
@@ -91,7 +96,7 @@ public class GamepadControls : MonoBehaviour
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
-                Debug.Log("charged");
+                //Debug.Log("charged");
                 chargeAmount += 1;
                 charged = true;
                 npcP2.destroyNote();
