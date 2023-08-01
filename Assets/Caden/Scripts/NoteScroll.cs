@@ -6,6 +6,7 @@ public class NoteScroll : MonoBehaviour
 {
     public Rigidbody2D selfRB;
     public bool noteCheck;
+    public bool missedNote = false;
     public float time;
     public MusicSync musicStart;
     //Note Scroll Speed (does not effect rythm);

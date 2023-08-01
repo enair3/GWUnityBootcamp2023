@@ -98,5 +98,39 @@ public class OutcomeDecider : MonoBehaviour
             gamepadControlsP1.charged = false;
             gamepadControlsP2.charged = false;
         }
+
+        else if (gamepadControlsP1.attacked == true && gamepadControlsP2.attacked == false && gamepadControlsP2.dodged == false && gamepadControlsP2.charged == false)
+        {
+            healthP2.health -= gamepadControlsP1.chargeAmount;
+
+            gamepadControlsP1.attacked = false;
+        }
+
+        else if (gamepadControlsP1.dodged == true && gamepadControlsP2.attacked == false && gamepadControlsP2.dodged == false && gamepadControlsP2.charged == false)
+        {
+            gamepadControlsP1.dodged = false;
+        }
+
+        else if (gamepadControlsP1.charged == true && gamepadControlsP2.attacked == false && gamepadControlsP2.dodged == false && gamepadControlsP2.charged == false)
+        {
+            gamepadControlsP1.charged = false;
+        }
+
+        else if (gamepadControlsP2.attacked == true && gamepadControlsP1.attacked == false && gamepadControlsP1.dodged == false && gamepadControlsP1.charged == false)
+        {
+            healthP1.health -= gamepadControlsP2.chargeAmount;
+
+            gamepadControlsP2.attacked = false;
+        }
+
+        else if (gamepadControlsP2.dodged == true && gamepadControlsP1.attacked == false && gamepadControlsP1.dodged == false && gamepadControlsP1.charged == false)
+        {
+            gamepadControlsP2.dodged = false;
+        }
+
+        else if (gamepadControlsP2.charged == true && gamepadControlsP1.attacked == false && gamepadControlsP1.dodged == false && gamepadControlsP1.charged == false)
+        {
+            gamepadControlsP2.charged = false;
+        }
     }
 }
