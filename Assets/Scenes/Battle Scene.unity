@@ -1084,6 +1084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848c0d2842fbb4ad9b2585cc2698a5c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  clip: {fileID: 0}
 --- !u!114 &749381420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,14 +1778,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487993006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0041, y: 2.7, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0.0040996918, y: 2.7, z: -0.000000023941059}
   m_LocalScale: {x: 0.4452106, y: 0.4452106, z: 0.4452106}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1509568753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,15 +1948,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: b842e35cd4dcf46b4b7b71a28989b6e8, type: 3}
     - target: {fileID: 6519924081305531255, guid: d05fe7c3bce7a8f4b89c8b865e4c3ac1, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.9716981
       objectReference: {fileID: 0}
     - target: {fileID: 6519924081305531255, guid: d05fe7c3bce7a8f4b89c8b865e4c3ac1, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.050887667
       objectReference: {fileID: 0}
     - target: {fileID: 6519924081305531255, guid: d05fe7c3bce7a8f4b89c8b865e4c3ac1, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d05fe7c3bce7a8f4b89c8b865e4c3ac1, type: 3}
@@ -2175,16 +2177,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b842e35cd4dcf46b4b7b71a28989b6e8, type: 3}
     - target: {fileID: 6519924081305531255, guid: 53ce3924c2e809f46b262a63cb7d7e62, type: 3}
-      propertyPath: m_Color.b
+      propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519924081305531255, guid: 53ce3924c2e809f46b262a63cb7d7e62, type: 3}
+      propertyPath: m_Color.b
+      value: 0.11534355
       objectReference: {fileID: 0}
     - target: {fileID: 6519924081305531255, guid: 53ce3924c2e809f46b262a63cb7d7e62, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.122799374
       objectReference: {fileID: 0}
     - target: {fileID: 6519924081305531255, guid: 53ce3924c2e809f46b262a63cb7d7e62, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.9056604
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53ce3924c2e809f46b262a63cb7d7e62, type: 3}
