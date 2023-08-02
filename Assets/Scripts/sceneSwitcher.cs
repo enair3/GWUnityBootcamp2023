@@ -26,23 +26,20 @@ public class sceneSwitcher : MonoBehaviour
         Application.Quit();
     }
     public void goToMainMenu() {
-        buttonClick.Play();
+        //buttonClick.Play();
         SceneManager.LoadScene("Menu");
     }
 
-    public void goToCredits()
-    {
+    public void goToCredits() {
         buttonClick.Play();
         SceneManager.LoadScene("Credits");
     }
 
-    public void player1Wins()
-    {
+    public void player1Wins() {
         SceneManager.LoadScene("Player1Win");
     }
 
-    public void player2Wins()
-    {
+    public void player2Wins() {
         SceneManager.LoadScene("Player2Win");
     }
 }
