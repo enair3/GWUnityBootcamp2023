@@ -19,11 +19,11 @@ public class sceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("Battle Scene");
     }
     public void howToPlay() {
-        buttonClick.Play();
+        //buttonClick.Play();
         SceneManager.LoadScene("How to Play");
     }
     public void quitGame() {
-        buttonClick.Play();
+        //buttonClick.Play();
         Application.Quit();
     }
     public void goToMainMenu() {
@@ -32,24 +32,24 @@ public class sceneSwitcher : MonoBehaviour
     }
 
     public void goToCredits() {
-        buttonClick.Play();
+        //buttonClick.Play();
         SceneManager.LoadScene("Credits");
     }
     public void goToMoreInfo()
     {
-        buttonClick.Play();
+        //buttonClick.Play();
         SceneManager.LoadScene("More Info");
     }
 
     public void goToTutorialPage1()
     {
-        buttonClick.Play();
+        //buttonClick.Play();
         SceneManager.LoadScene("Tutorial Page 1");
     }
 
     public void goToTutorialPage2()
     {
-        buttonClick.Play();
+        //buttonClick.Play();
         SceneManager.LoadScene("Tutorial Page 2");
     }
 
