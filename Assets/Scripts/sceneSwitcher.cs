@@ -6,29 +6,35 @@ using UnityEngine.SceneManagement;
 public class sceneSwitcher : MonoBehaviour
 {
     // Button Click SFX Variables
-    public AudioSource source;
-    public AudioClip clip;
+    
+    public AudioSource buttonClick;
+    //public AudioClip clip;
 
     // Remember to add scenes to the build settings or it won't work!
 
     public void playGame()
     {
-        source.PlayOneShot(clip);
-        // System.Threading.Thread.Sleep(1000);
+        buttonClick.Play();
+        //System.Threading.Thread.Sleep(1000);
         SceneManager.LoadScene("Battle Scene");
     }
     public void howToPlay() {
+        buttonClick.Play();
+        //System.Threading.Thread.Sleep(1000);
         SceneManager.LoadScene("How to Play");
     }
     public void quitGame() {
+        buttonClick.Play();
         Application.Quit();
     }
     public void goToMainMenu() {
+        buttonClick.Play();;
         SceneManager.LoadScene("Menu");
     }
 
     public void goToCredits()
     {
+        buttonClick.Play();
         SceneManager.LoadScene("Credits");
     }
 
