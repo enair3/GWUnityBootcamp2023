@@ -45,4 +45,8 @@ public class sceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("Player2Win");
     }
+    public void goToMoreInfo()
+    {
+        SceneManager.LoadScene("More Info");
+    }
 }
