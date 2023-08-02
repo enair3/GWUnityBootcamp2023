@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public string winScreen;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         
     }
@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Invoke("playerDies", 15);
+        Invoke("playerDies", 1);
     }
 
     void playerDies()
