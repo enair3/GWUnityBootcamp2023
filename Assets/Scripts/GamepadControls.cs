@@ -20,6 +20,9 @@ public class GamepadControls : MonoBehaviour
     public notePlatformCode npcP2;
 
     public Audio_Manager sfx;
+    public AudioClip attack;
+    public AudioClip dodge;
+    public AudioClip charge;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,10 +41,10 @@ public class GamepadControls : MonoBehaviour
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
-                //Debug.Log("attacked");
+                Debug.Log("attacked");
                 attacked = true;
                 npcP1.destroyNote();
-                sfx.allSounds[1].Play();
+                sfx.allSounds[0].PlayOneShot(attack, sfx.volumeSet);
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -49,7 +52,7 @@ public class GamepadControls : MonoBehaviour
                 //Debug.Log("attacked");
                 attacked = true;
                 npcP2.destroyNote();
-                sfx.allSounds[1].Play();
+                sfx.allSounds[0].PlayOneShot(attack, sfx.volumeSet);
             }
 
             if (dodgeDelay >= 1)
@@ -65,11 +68,11 @@ public class GamepadControls : MonoBehaviour
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
-                //Debug.Log("dodged");
+                Debug.Log("dodged");
                 dodged = true;
                 dodgeDelay = 2;
                 npcP1.destroyNote();
-                sfx.allSounds[2].Play();
+                sfx.allSounds[0].PlayOneShot(dodge, sfx.volumeSet);
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -78,7 +81,7 @@ public class GamepadControls : MonoBehaviour
                 dodged = true;
                 dodgeDelay = 2;
                 npcP2.destroyNote();
-                sfx.allSounds[2].Play();
+                sfx.allSounds[0].PlayOneShot(dodge, sfx.volumeSet);
             }
 
             if (dodgeDelay >= 1)
@@ -94,20 +97,20 @@ public class GamepadControls : MonoBehaviour
         {
             if (npcP1.noteActive == true && playerSelected == 1)
             {
-                //Debug.Log("charged");
+                Debug.Log("charged");
                 chargeAmount += 1;
                 charged = true;
                 npcP1.destroyNote();
-                sfx.allSounds[3].Play();
+                sfx.allSounds[0].PlayOneShot(charge, sfx.volumeSet);
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
             {
-                //Debug.Log("charged");
+                Debug.Log("charged");
                 chargeAmount += 1;
                 charged = true;
                 npcP2.destroyNote();
-                sfx.allSounds[3].Play();
+                sfx.allSounds[0].PlayOneShot(charge, sfx.volumeSet);
             }
 
             if (dodgeDelay >= 1)
