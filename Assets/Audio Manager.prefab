@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d0b854c19547141bc88b919e3ab498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSet: 0.3
+  volumeSet: 0.5
   allSounds: []
