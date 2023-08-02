@@ -15,12 +15,10 @@ public class sceneSwitcher : MonoBehaviour
     public void playGame()
     {
         buttonClick.Play();
-        //System.Threading.Thread.Sleep(1000);
         SceneManager.LoadScene("Battle Scene");
     }
     public void howToPlay() {
         buttonClick.Play();
-        //System.Threading.Thread.Sleep(1000);
         SceneManager.LoadScene("How to Play");
     }
     public void quitGame() {
@@ -28,7 +26,7 @@ public class sceneSwitcher : MonoBehaviour
         Application.Quit();
     }
     public void goToMainMenu() {
-        buttonClick.Play();;
+        buttonClick.Play();
         SceneManager.LoadScene("Menu");
     }
 
