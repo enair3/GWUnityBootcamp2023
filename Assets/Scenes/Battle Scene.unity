@@ -350,9 +350,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_Size.x
+      value: 2.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_Size.y
+      value: 3.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 209644067, guid: 5b25808fcadaf40878c222720e875f06, type: 3}
+      objectReference: {fileID: -2009007799, guid: 744d2b4e57d073f48a47725be2dfb913, type: 3}
     - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -371,6 +379,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052203, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
@@ -1225,6 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848c0d2842fbb4ad9b2585cc2698a5c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonClick: {fileID: 0}
 --- !u!114 &749381420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1653,9 +1666,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_Size.x
+      value: 2.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_Size.y
+      value: 3.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2012004119, guid: 76b57ad1b9af54df18b17c3c5463911e, type: 3}
+      objectReference: {fileID: 2142041108, guid: 50b2d6965c1cd46ba93877d2c93faf02, type: 3}
     - target: {fileID: 8244245108473052199, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_Color.b
       value: 1
