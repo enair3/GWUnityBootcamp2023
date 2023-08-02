@@ -114,7 +114,10 @@ public class GamepadControls : MonoBehaviour
                 //Debug.Log("charged");
 
                 //damage goes up by one (must come first or it doesn't work)
-                chargeAmount += 1;
+                if (chargeAmount <= 10)
+                {
+                    chargeAmount += 1;
+                }
 
                 //sets the charged boolean to true
                 charged = true;
@@ -127,7 +130,10 @@ public class GamepadControls : MonoBehaviour
                 //Debug.Log("charged");
 
                 //damage goes up by one (must come first or it doesn't work)
-                chargeAmount += 1;
+                if (chargeAmount <= 10)
+                {
+                    chargeAmount += 1;
+                }
 
                 //sets the charged boolean to true
                 charged = true;
