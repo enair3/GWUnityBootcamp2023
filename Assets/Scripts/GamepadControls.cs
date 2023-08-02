@@ -19,10 +19,12 @@ public class GamepadControls : MonoBehaviour
     public notePlatformCode npcP1;
     public notePlatformCode npcP2;
 
+    public Audio_Manager sfx;
+
     // Start is called before the first frame update
     void Awake()
     {
-        
+        sfx = FindObjectOfType<Audio_Manager>();
     }
 
     void Update()
@@ -39,6 +41,7 @@ public class GamepadControls : MonoBehaviour
                 //Debug.Log("attacked");
                 attacked = true;
                 npcP1.destroyNote();
+                sfx.allSounds[1].Play();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -46,6 +49,7 @@ public class GamepadControls : MonoBehaviour
                 //Debug.Log("attacked");
                 attacked = true;
                 npcP2.destroyNote();
+                sfx.allSounds[1].Play();
             }
 
             if (dodgeDelay >= 1)
@@ -65,6 +69,7 @@ public class GamepadControls : MonoBehaviour
                 dodged = true;
                 dodgeDelay = 2;
                 npcP1.destroyNote();
+                sfx.allSounds[2].Play();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -73,6 +78,7 @@ public class GamepadControls : MonoBehaviour
                 dodged = true;
                 dodgeDelay = 2;
                 npcP2.destroyNote();
+                sfx.allSounds[2].Play();
             }
 
             if (dodgeDelay >= 1)
@@ -92,6 +98,7 @@ public class GamepadControls : MonoBehaviour
                 chargeAmount += 1;
                 charged = true;
                 npcP1.destroyNote();
+                sfx.allSounds[3].Play();
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -100,6 +107,7 @@ public class GamepadControls : MonoBehaviour
                 chargeAmount += 1;
                 charged = true;
                 npcP2.destroyNote();
+                sfx.allSounds[3].Play();
             }
 
             if (dodgeDelay >= 1)
