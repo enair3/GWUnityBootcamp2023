@@ -57,7 +57,7 @@ public class Audio_Manager : MonoBehaviour
     void FindAudio()
     {
         //Removes all audio sources from previous scenes to prevent errors.
-        allSounds = null;
+        //allSounds = null;
         //Finds all audio sources and sets array values accordingly.
         allSounds = FindObjectsOfType<AudioSource>();
         //Makes audio manager stay through scenes.
