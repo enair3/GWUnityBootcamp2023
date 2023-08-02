@@ -12,6 +12,7 @@ public class sceneSwitcher : MonoBehaviour
 
     // Remember to add scenes to the build settings or it won't work!
 
+    // menu and tutorial screen switch
     public void playGame()
     {
         buttonClick.Play();
@@ -34,8 +35,27 @@ public class sceneSwitcher : MonoBehaviour
         buttonClick.Play();
         SceneManager.LoadScene("Credits");
     }
+    public void goToMoreInfo()
+    {
+        buttonClick.Play();
+        SceneManager.LoadScene("More Info");
+    }
 
-    public void player1Wins() {
+    public void goToTutorialPage1()
+    {
+        buttonClick.Play();
+        SceneManager.LoadScene("Tutorial Page 1");
+    }
+
+    public void goToTutorialPage2()
+    {
+        buttonClick.Play();
+        SceneManager.LoadScene("Tutorial Page 2");
+    }
+
+    // win screen switch
+    public void player1Wins()
+    {
         SceneManager.LoadScene("Player1Win");
     }
 
