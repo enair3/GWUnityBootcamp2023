@@ -354,7 +354,6 @@ GameObject:
   - component: {fileID: 749381422}
   - component: {fileID: 749381421}
   - component: {fileID: 749381420}
-  - component: {fileID: 749381419}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -362,18 +361,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &749381419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749381418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848c0d2842fbb4ad9b2585cc2698a5c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &749381420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,7 +610,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 749381419}
+      - m_Target: {fileID: 947604970}
         m_TargetAssemblyTypeName: sceneSwitcher, Assembly-CSharp
         m_MethodName: goToMainMenu
         m_Mode: 1
@@ -819,6 +806,7 @@ GameObject:
   - component: {fileID: 947604969}
   - component: {fileID: 947604968}
   - component: {fileID: 947604967}
+  - component: {fileID: 947604970}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -892,6 +880,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947604970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947604966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848c0d2842fbb4ad9b2585cc2698a5c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonClick: {fileID: 1172290770}
 --- !u!1 &1055859772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,6 +1029,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055859772}
   m_CullTransparentMesh: 1
+--- !u!1001 &1172290769
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2022879150808845580, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_Name
+      value: Audio Source Button Click
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 154.68748
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 291.63397
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7264059
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022879150808845582, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+--- !u!82 &1172290770 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2022879150808845583, guid: a7cd7ec35c2540b4585fa476bdcfc73e, type: 3}
+  m_PrefabInstance: {fileID: 1172290769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1690366774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1310,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 749381419}
+      - m_Target: {fileID: 947604970}
         m_TargetAssemblyTypeName: sceneSwitcher, Assembly-CSharp
         m_MethodName: goToMoreInfo
         m_Mode: 1
