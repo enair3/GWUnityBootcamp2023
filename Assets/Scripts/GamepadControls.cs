@@ -23,6 +23,9 @@ public class GamepadControls : MonoBehaviour
     public notePlatformCode npcP1;
     public notePlatformCode npcP2;
 
+    //defines the pause menu object
+    [SerializeField] GameObject pauseMenu;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -147,6 +150,20 @@ public class GamepadControls : MonoBehaviour
                 dodgeDelay -= 1;
             }
         }
+    }
+
+    public void Pauses(InputAction.CallbackContext cxt)
+    {
+        if (cxt.performed)
+        {
+            Pause();
+        }
+    }
+
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 }
