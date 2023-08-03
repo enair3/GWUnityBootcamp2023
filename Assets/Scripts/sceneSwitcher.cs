@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class sceneSwitcher : MonoBehaviour
 {
     // Button Click SFX Variables
+
+    public BGmusic BGmusic;
     
     public AudioSource buttonClick;
     //public AudioClip clip;
@@ -26,39 +28,41 @@ public class sceneSwitcher : MonoBehaviour
     {
         buttonClick.Play();
         SceneManager.LoadScene("Battle Scene");
+        Time.timeScale = 1f;
     }
     public void howToPlay() {
-        //buttonClick.Play();
+        buttonClick.Play();
         SceneManager.LoadScene("How to Play");
     }
     public void quitGame() {
-        //buttonClick.Play();
+        buttonClick.Play();
         Application.Quit();
     }
     public void goToMainMenu() {
-        //buttonClick.Play();
+        buttonClick.Play();
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
     }
 
     public void goToCredits() {
-        //buttonClick.Play();
+        buttonClick.Play();
         SceneManager.LoadScene("Credits");
     }
     public void goToMoreInfo()
     {
-        //buttonClick.Play();
+        buttonClick.Play();
         SceneManager.LoadScene("More Info");
     }
 
     public void goToTutorialPage1()
     {
-        //buttonClick.Play();
+        buttonClick.Play();
         SceneManager.LoadScene("Tutorial Page 1");
     }
 
     public void goToTutorialPage2()
     {
-        //buttonClick.Play();
+        buttonClick.Play();
         SceneManager.LoadScene("Tutorial Page 2");
     }
 
