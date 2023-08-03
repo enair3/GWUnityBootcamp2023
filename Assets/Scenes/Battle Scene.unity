@@ -373,6 +373,34 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: e4a13a88-ecd4-4c79-b602-37fd18686db0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Fighting/New action
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1952711274}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052203, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: ndP1
       value: 
@@ -1677,8 +1705,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: e4a13a88-ecd4-4c79-b602-37fd18686db0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Fighting/Pause[/XInputControllerWindows/select]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 524074888}
+    - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8244245108473052202, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
