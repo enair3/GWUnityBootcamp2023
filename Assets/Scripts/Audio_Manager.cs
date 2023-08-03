@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Audio_Manager : MonoBehaviour
 {
+    public static Audio_Manager instance;
+
     public float volumeSet;
     public AudioSource[] allSounds;
     // Start is called before the first frame update
@@ -61,7 +63,15 @@ public class Audio_Manager : MonoBehaviour
         //Finds all audio sources and sets array values accordingly.
         allSounds = FindObjectsOfType<AudioSource>();
         //Makes audio manager stay through scenes.
-        DontDestroyOnLoad(gameObject);
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
   
         changeVolume();
         //Debug.Log("Start");

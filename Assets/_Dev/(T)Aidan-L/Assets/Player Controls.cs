@@ -53,6 +53,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""e4a13a88-ecd4-4c79-b602-37fd18686db0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -86,6 +95,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Player1;Player2"",
                     ""action"": ""Dodge"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""490f27a1-acab-428c-be4e-6c50e490e589"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Player1;Player2"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -122,6 +142,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Fighting_Attack = m_Fighting.FindAction("Attack", throwIfNotFound: true);
         m_Fighting_Dodge = m_Fighting.FindAction("Dodge", throwIfNotFound: true);
         m_Fighting_Charge = m_Fighting.FindAction("Charge", throwIfNotFound: true);
+        m_Fighting_Pause = m_Fighting.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -184,6 +205,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Fighting_Attack;
     private readonly InputAction m_Fighting_Dodge;
     private readonly InputAction m_Fighting_Charge;
+    private readonly InputAction m_Fighting_Pause;
     public struct FightingActions
     {
         private @PlayerControls m_Wrapper;
@@ -191,6 +213,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_Fighting_Attack;
         public InputAction @Dodge => m_Wrapper.m_Fighting_Dodge;
         public InputAction @Charge => m_Wrapper.m_Fighting_Charge;
+        public InputAction @Pause => m_Wrapper.m_Fighting_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Fighting; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -209,6 +232,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Charge.started -= m_Wrapper.m_FightingActionsCallbackInterface.OnCharge;
                 @Charge.performed -= m_Wrapper.m_FightingActionsCallbackInterface.OnCharge;
                 @Charge.canceled -= m_Wrapper.m_FightingActionsCallbackInterface.OnCharge;
+                @Pause.started -= m_Wrapper.m_FightingActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_FightingActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_FightingActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_FightingActionsCallbackInterface = instance;
             if (instance != null)
@@ -222,6 +248,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Charge.started += instance.OnCharge;
                 @Charge.performed += instance.OnCharge;
                 @Charge.canceled += instance.OnCharge;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -249,5 +278,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnDodge(InputAction.CallbackContext context);
         void OnCharge(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

@@ -6,9 +6,20 @@ using UnityEngine.SceneManagement;
 public class sceneSwitcher : MonoBehaviour
 {
     // Button Click SFX Variables
+
+    public BGmusic BGmusic;
     
     public AudioSource buttonClick;
     //public AudioClip clip;
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Battle Scene")
+            BGmusic.instance.GetComponent<AudioSource>().Pause();
+
+        /*if (SceneManager.GetActiveScene().name == "Menu")
+            BGmusic.instance.GetComponent<AudioSource>().Play();*/
+    }
 
     // Remember to add scenes to the build settings or it won't work!
 
@@ -17,6 +28,7 @@ public class sceneSwitcher : MonoBehaviour
     {
         buttonClick.Play();
         SceneManager.LoadScene("Battle Scene");
+        Time.timeScale = 1f;
     }
     public void howToPlay() {
         buttonClick.Play();
@@ -27,8 +39,9 @@ public class sceneSwitcher : MonoBehaviour
         Application.Quit();
     }
     public void goToMainMenu() {
-        //buttonClick.Play();
+        buttonClick.Play();
         SceneManager.LoadScene("Menu");
+        Time.timeScale = 1f;
     }
 
     public void goToCredits() {
