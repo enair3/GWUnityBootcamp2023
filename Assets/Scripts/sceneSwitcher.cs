@@ -10,6 +10,15 @@ public class sceneSwitcher : MonoBehaviour
     public AudioSource buttonClick;
     //public AudioClip clip;
 
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "Battle Scene")
+            BGmusic.instance.GetComponent<AudioSource>().Pause();
+
+        /*if (SceneManager.GetActiveScene().name == "Menu")
+            BGmusic.instance.GetComponent<AudioSource>().Play();*/
+    }
+
     // Remember to add scenes to the build settings or it won't work!
 
     // menu and tutorial screen switch

@@ -8,6 +8,7 @@ TagManager:
   - noteOverlap
   - SongBegin
   - Note
+  - MenuMusic
   layers:
   - Default
   - TransparentFX
