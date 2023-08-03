@@ -14,7 +14,17 @@ public class OutcomeDecider : MonoBehaviour
 
     //player health scripts
     Health healthP1; 
-    Health healthP2; 
+    Health healthP2;
+
+    //UI words for player 1 (red)
+    [SerializeField] GameObject p1Attack;
+    [SerializeField] GameObject p1Dodge;
+    [SerializeField] GameObject p1Charge;
+
+    //UI words for player 2 (blue)
+    [SerializeField] GameObject p2Attack;
+    [SerializeField] GameObject p2Dodge;
+    [SerializeField] GameObject p2Charge;
 
     // Start is called before the first frame update
     void Awake()
@@ -53,6 +63,9 @@ public class OutcomeDecider : MonoBehaviour
 
                 //resets player 2 charge amount
                 gamepadControlsP2.chargeAmount = 1;
+
+                StartCoroutine(p2Attacked());
+                StartCoroutine(p1Attacked());
             }
 
             //if player 2 dodges when player 1 attacks
@@ -136,6 +149,8 @@ public class OutcomeDecider : MonoBehaviour
                     gamepadControlsP2.dodgeDelay -= 1;
                 }
             }
+
+            StartCoroutine(p1Dodged());
         }
 
         //if player 1 charges
@@ -184,6 +199,8 @@ public class OutcomeDecider : MonoBehaviour
                     gamepadControlsP2.dodgeDelay -= 1;
                 }
             }
+
+            StartCoroutine(p1Charged());
         }
 
         //if player 2 attacks when player 1 misses
@@ -246,5 +263,47 @@ public class OutcomeDecider : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator p1Attacked()
+    {
+        p1Attack.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        p1Attack.SetActive(false);
+    }
+
+    IEnumerator p1Dodged()
+    {
+        p1Dodge.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        p1Dodge.SetActive(false);
+    }
+
+    IEnumerator p1Charged()
+    {
+        p1Charge.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        p1Charge.SetActive(false);
+    }
+
+    IEnumerator p2Attacked()
+    {
+        p2Attack.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        p2Attack.SetActive(false);
+    }
+
+    IEnumerator p2Dodged()
+    {
+        p2Dodge.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        p2Dodge.SetActive(false);
+    }
+
+    IEnumerator p2Charged()
+    {
+        p2Charge.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+        p2Charge.SetActive(false);
     }
 }
