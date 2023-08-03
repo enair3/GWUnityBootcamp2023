@@ -2163,6 +2163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848c0d2842fbb4ad9b2585cc2698a5c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BGmusic: {fileID: 0}
   buttonClick: {fileID: 37207927}
 --- !u!1 &971516222 stripped
 GameObject:
