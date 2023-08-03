@@ -53,6 +53,24 @@ public class sceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("Tutorial Page 2");
     }
 
+    public void goToTutorialPage3()
+    {
+        buttonClick.Play();
+        SceneManager.LoadScene("Tutorial Page 3");
+    }
+
+    public void goToTutorialPage4()
+    {
+        buttonClick.Play();
+        SceneManager.LoadScene("Tutorial Page 4");
+    }
+
+    public void goToTutorialPage5()
+    {
+        buttonClick.Play();
+        SceneManager.LoadScene("Tutorial Page 5");
+    }
+
     // win screen switch
     public void player1Wins()
     {
