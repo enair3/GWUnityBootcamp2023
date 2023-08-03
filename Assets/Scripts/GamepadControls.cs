@@ -29,7 +29,6 @@ public class GamepadControls : MonoBehaviour
 
     public Animator playerAnimations;
 
-
     public AnimatorStateInfo animTime;
     public float animationTime = -10;
 
