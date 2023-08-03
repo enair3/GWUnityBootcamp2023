@@ -24,6 +24,12 @@ public class GamepadControls : MonoBehaviour
     public AudioClip dodge;
     public AudioClip charge;
 
+    public Animator playerAnimations;
+
+
+    public AnimatorStateInfo animTime;
+    public float animationTime = -10;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -45,6 +51,7 @@ public class GamepadControls : MonoBehaviour
                 attacked = true;
                 npcP1.destroyNote();
                 sfx.allSounds[0].PlayOneShot(attack, sfx.volumeSet);
+                playerAnimations.Play("RedAttack");
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -53,6 +60,7 @@ public class GamepadControls : MonoBehaviour
                 attacked = true;
                 npcP2.destroyNote();
                 sfx.allSounds[0].PlayOneShot(attack, sfx.volumeSet);
+                playerAnimations.Play("BlueAttack");
             }
 
             if (dodgeDelay >= 1)
@@ -73,6 +81,7 @@ public class GamepadControls : MonoBehaviour
                 dodgeDelay = 2;
                 npcP1.destroyNote();
                 sfx.allSounds[0].PlayOneShot(dodge, sfx.volumeSet);
+                playerAnimations.Play("RedDodge");
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -82,6 +91,7 @@ public class GamepadControls : MonoBehaviour
                 dodgeDelay = 2;
                 npcP2.destroyNote();
                 sfx.allSounds[0].PlayOneShot(dodge, sfx.volumeSet);
+                playerAnimations.Play("BlueDodge");
             }
 
             if (dodgeDelay >= 1)
@@ -102,6 +112,7 @@ public class GamepadControls : MonoBehaviour
                 charged = true;
                 npcP1.destroyNote();
                 sfx.allSounds[0].PlayOneShot(charge, sfx.volumeSet);
+                playerAnimations.Play("RedCharge");
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -111,6 +122,7 @@ public class GamepadControls : MonoBehaviour
                 charged = true;
                 npcP2.destroyNote();
                 sfx.allSounds[0].PlayOneShot(charge, sfx.volumeSet);
+                playerAnimations.Play("BlueCharge");
             }
 
             if (dodgeDelay >= 1)

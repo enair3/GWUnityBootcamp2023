@@ -42,9 +42,11 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //player 1 takes damage
                 healthP1.health -= gamepadControlsP2.chargeAmount;
+                gamepadControlsP1.playerAnimations.Play("RedDamaged");
 
                 //player 2 takes damage
                 healthP2.health -= gamepadControlsP1.chargeAmount;
+                gamepadControlsP2.playerAnimations.Play("BlueDamaged");
 
                 //resets player 2 for next beat
                 gamepadControlsP2.attacked = false;
@@ -65,6 +67,7 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //player 2 takes damage
                 healthP2.health -= gamepadControlsP1.chargeAmount;
+                gamepadControlsP2.playerAnimations.Play("BlueDamaged");
 
                 //resets player 2 for next beat
                 gamepadControlsP2.charged = false;
@@ -78,7 +81,8 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //player 2 takes damage
                 healthP2.health -= gamepadControlsP1.chargeAmount;
-                
+                gamepadControlsP2.playerAnimations.Play("BlueDamaged");
+
                 //player 2 reset charge amount
                 gamepadControlsP2.chargeAmount = 1;
 
@@ -145,6 +149,7 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //player 2 takes damage
                 healthP1.health -= gamepadControlsP2.chargeAmount;
+                gamepadControlsP2.playerAnimations.Play("BlueDamaged");
 
                 //player 1 reset charge amount
                 gamepadControlsP1.chargeAmount = 1;
@@ -192,6 +197,7 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //player 1 takes damage
                 healthP1.health -= gamepadControlsP2.chargeAmount;
+                gamepadControlsP1.playerAnimations.Play("RedDamaged");
 
                 //player 1 reset charge amount
                 gamepadControlsP1.chargeAmount = 1;
