@@ -115,6 +115,7 @@ public class GamepadControls : MonoBehaviour
                 npcP1.destroyNote();
                 sfx.allSounds[0].PlayOneShot(charge, sfx.volumeSet);
                 playerAnimations.Play("RedCharge");
+
             }
 
             if (npcP2.noteActive == true && playerSelected == 2)
@@ -125,6 +126,10 @@ public class GamepadControls : MonoBehaviour
                 npcP2.destroyNote();
                 sfx.allSounds[0].PlayOneShot(charge, sfx.volumeSet);
                 playerAnimations.Play("BlueCharge");
+
+                //check with 1 controller as P2
+                //Debug.Log("blue hit 4");
+                //playerAnimations.Play("BlueDamaged");
             }
 
             if (dodgeDelay >= 1)
