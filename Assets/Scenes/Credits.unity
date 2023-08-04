@@ -318,11 +318,11 @@ RectTransform:
   m_Children:
   - {fileID: 165245986}
   m_Father: {fileID: 1580483621}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -265.65158, y: 188.2669}
+  m_AnchoredPosition: {x: 274, y: -176.29}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151692884
@@ -749,8 +749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62.822, y: 71.6119}
-  m_SizeDelta: {x: 125.64, y: 30.3269}
+  m_AnchoredPosition: {x: 0.00001542, y: -176.29}
+  m_SizeDelta: {x: 233.9, y: 50.003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594062824
 MonoBehaviour:
@@ -799,14 +799,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
-  m_fontSizeBase: 38
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -6.630722, y: 0, z: -2.1940727, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -946,7 +946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: 11.822}
+  m_AnchoredPosition: {x: 0, y: -71.331}
   m_SizeDelta: {x: 233.9, y: 23.6439}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893510791
@@ -1081,7 +1081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -186, y: 138}
+  m_AnchoredPosition: {x: -10.016, y: -22}
   m_SizeDelta: {x: 289.6109, y: 23.415}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017305657
@@ -1113,8 +1113,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294922513
-  m_fontColor: {r: 0.06666667, g: 0.31764707, b: 1, a: 1}
+    rgba: 4294901918
+  m_fontColor: {r: 0.61960787, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1181,6 +1181,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017305655}
   m_CullTransparentMesh: 1
+--- !u!1 &1098121163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1098121164}
+  - component: {fileID: 1098121166}
+  - component: {fileID: 1098121165}
+  m_Layer: 5
+  m_Name: Eriane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1098121164
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098121163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1580483621}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00021362, y: -116.99}
+  m_SizeDelta: {x: 233.9, y: 39.683}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1098121165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098121163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Eriane - Lab Leader/ Producer
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
+  m_sharedMaterial: {fileID: 8670380814632873181, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294901918
+  m_fontColor: {r: 0.61960787, g: 0, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 25
+  m_fontSizeBase: 25
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 2.6999817, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1098121166
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098121163}
+  m_CullTransparentMesh: 1
 --- !u!1 &1257940448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,8 +1351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: -161}
-  m_SizeDelta: {x: 327.252, y: 47.2104}
+  m_AnchoredPosition: {x: 11.717, y: 87}
+  m_SizeDelta: {x: 524.3354, y: 16.657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257940450
 MonoBehaviour:
@@ -1239,7 +1374,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Xavier - Github Manager / Troubleshooter & Programmer
+  m_text: 'Xavier - Github, Asset Implementation, Bunch of UI
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
   m_sharedMaterial: {fileID: 8670380814632873181, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
@@ -1273,7 +1410,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1302,7 +1439,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -2.4166489, y: 0, z: -1.3498611, w: -1.3498884}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1465,8 +1602,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 193, y: 138.59}
-  m_SizeDelta: {x: 277.7507, y: 24.5856}
+  m_AnchoredPosition: {x: -0.000013828, y: 30}
+  m_SizeDelta: {x: 486.9818, y: 25.9355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441790415
 MonoBehaviour:
@@ -1488,7 +1625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Caden - Lead Programmer
+  m_text: Caden - Lead Programmer & Character Artist
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
   m_sharedMaterial: {fileID: 8670380814632873181, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
@@ -1497,8 +1634,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294770176
-  m_fontColor: {r: 0, g: 0.99607843, b: 0.9882353, a: 1}
+    rgba: 4293918975
+  m_fontColor: {r: 1, g: 0, b: 0.9411765, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1522,7 +1659,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1551,7 +1688,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 4.049675, y: 0, z: 0.00010663556, w: 1.3498745}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1600,8 +1737,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.557, y: -94}
-  m_SizeDelta: {x: 302.399, y: 46.99}
+  m_AnchoredPosition: {x: -0.000015259, y: 131.00003}
+  m_SizeDelta: {x: 527.2961, y: 29.9358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1560787246
 MonoBehaviour:
@@ -1623,7 +1760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ryan - Lead Designer & Art Director
+  m_text: Ryan - Lead Designer, Art Director, Co-Producer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
   m_sharedMaterial: {fileID: 8670380814632873181, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
@@ -1657,7 +1794,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1686,7 +1823,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -0.35919964, y: 0, z: 1.3498611, w: 4.049655}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1799,6 +1936,7 @@ RectTransform:
   - {fileID: 1257940449}
   - {fileID: 1836880585}
   - {fileID: 1560787245}
+  - {fileID: 1098121164}
   - {fileID: 151692883}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1927,8 +2065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29, y: -35}
-  m_SizeDelta: {x: 255.9317, y: 19.4571}
+  m_AnchoredPosition: {x: -0.000033379, y: 183}
+  m_SizeDelta: {x: 624.8119, y: 30.8378}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836880586
 MonoBehaviour:
@@ -1950,7 +2088,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gideon - Lead Composer
+  m_text: Gideon - Lead Composer and SFX + Programmed Health Bar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
   m_sharedMaterial: {fileID: 8670380814632873181, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
@@ -2013,7 +2151,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -6.749443, y: 0, z: -2.6997833, w: 0.00003428728}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
