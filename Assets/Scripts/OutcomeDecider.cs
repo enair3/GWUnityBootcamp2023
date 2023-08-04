@@ -66,7 +66,6 @@ public class OutcomeDecider : MonoBehaviour
                 gamepadControlsP2.chargeAmount = 1;
 
                 StartCoroutine(p2Attacked());
-                StartCoroutine(p1Attacked());
             }
 
             //if player 2 dodges when player 1 attacks
@@ -74,6 +73,8 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //resets player 2 for next beat
                 gamepadControlsP2.dodged = false;
+
+                StartCoroutine(p2Dodged());
             }
 
             //if player 2 charges when player 1 attacks
@@ -89,6 +90,8 @@ public class OutcomeDecider : MonoBehaviour
 
                 //resets player 2 charge amount
                 gamepadControlsP2.chargeAmount = 1;
+
+                StartCoroutine(p2Charged());
             }
 
             //if player 2 misses the beat when player 1 attacks
@@ -111,6 +114,8 @@ public class OutcomeDecider : MonoBehaviour
 
             //player 1 reset charge amount
             gamepadControlsP1.chargeAmount = 1;
+
+            StartCoroutine(p1Attacked());
         }
 
         //if player 1 dodges
@@ -127,6 +132,8 @@ public class OutcomeDecider : MonoBehaviour
 
                 //player 2 reset charge amount
                 gamepadControlsP2.chargeAmount = 1;
+
+                StartCoroutine(p2Attacked());
             }
 
             //if player 2 dodges when player 1 dodges
@@ -134,6 +141,8 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //resets player 2 for next beat
                 gamepadControlsP2.dodged = false;
+
+                StartCoroutine(p2Dodged());
             }
 
             //if player 2 charges when player 1 dodges
@@ -141,6 +150,8 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //resets player 2 for next beat
                 gamepadControlsP2.charged = false;
+
+                StartCoroutine(p2Charged());
             }
 
             //if player 2 misses the beat when player 1 dodges
@@ -165,7 +176,7 @@ public class OutcomeDecider : MonoBehaviour
             //if player 2 attacks when player 1 charges
             if (gamepadControlsP2.attacked == true)
             {
-                //player 2 takes damage
+                //player 1 takes damage
                 healthP1.health -= gamepadControlsP2.chargeAmount;
                 Debug.Log("blue hit 4");
                 gamepadControlsP2.playerAnimations.Play("BlueDamaged");
@@ -178,6 +189,8 @@ public class OutcomeDecider : MonoBehaviour
 
                 //player 2 reset charge amount
                 gamepadControlsP2.chargeAmount = 1;
+
+                StartCoroutine(p2Attacked());
             }
 
             //if player 2 dodges when player 1 charges
@@ -185,6 +198,8 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //resets player 2 for next beat
                 gamepadControlsP2.dodged = false;
+
+                StartCoroutine(p2Dodged());
             }
 
             //if player 2 charges when player 1 charges
@@ -192,6 +207,8 @@ public class OutcomeDecider : MonoBehaviour
             {
                 //resets player 2 for next beat
                 gamepadControlsP2.charged = false;
+
+                StartCoroutine(p2Charged());
             }
 
             //if player 2 misses the beat when player 1 charges
@@ -232,6 +249,8 @@ public class OutcomeDecider : MonoBehaviour
 
             //player 2 reset charge amount
             gamepadControlsP2.chargeAmount = 1;
+
+            StartCoroutine(p2Attacked());
         }
 
         //if player 2 dodges when player 1 misses
@@ -249,6 +268,8 @@ public class OutcomeDecider : MonoBehaviour
                     gamepadControlsP1.dodgeDelay -= 1;
                 }
             }
+
+            StartCoroutine(p2Dodged());
         }
 
         //if player 2 charges when player 1 misses
@@ -266,48 +287,50 @@ public class OutcomeDecider : MonoBehaviour
                     gamepadControlsP1.dodgeDelay -= 1;
                 }
             }
+
+            StartCoroutine(p2Charged());
         }
     }
 
     IEnumerator p1Attacked()
     {
         p1Attack.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         p1Attack.SetActive(false);
     }
 
     IEnumerator p1Dodged()
     {
         p1Dodge.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         p1Dodge.SetActive(false);
     }
 
     IEnumerator p1Charged()
     {
         p1Charge.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         p1Charge.SetActive(false);
     }
 
     IEnumerator p2Attacked()
     {
         p2Attack.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         p2Attack.SetActive(false);
     }
 
     IEnumerator p2Dodged()
     {
         p2Dodge.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         p2Dodge.SetActive(false);
     }
 
     IEnumerator p2Charged()
     {
         p2Charge.SetActive(true);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
         p2Charge.SetActive(false);
     }
 }
