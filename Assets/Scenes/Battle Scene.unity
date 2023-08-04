@@ -438,6 +438,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 219022693842929550, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: health
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 219022693842929550, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: winScreen
       value: Player2Win
       objectReference: {fileID: 0}
@@ -992,9 +996,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 25
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 25
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1143,9 +1147,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 25
   m_WholeNumbers: 1
-  m_Value: 10
+  m_Value: 25
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2525,6 +2529,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 219022693842929550, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
+      propertyPath: health
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 219022693842929550, guid: 51d6a3fd59417e9438d69b3775fbff70, type: 3}
       propertyPath: winScreen
       value: Player1Win
