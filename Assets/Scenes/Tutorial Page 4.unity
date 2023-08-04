@@ -930,8 +930,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Charging increases the damage of your next attack by 1, stacking up to
-    10 times, but taking damage makes you lose all your charges.
+  m_text: Charging (B) increases the damage of your next attack by 1, stacking up
+    to 10 times, but taking damage makes you lose all your charges.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
   m_sharedMaterial: {fileID: 8670380814632873181, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}

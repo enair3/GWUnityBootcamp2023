@@ -1065,8 +1065,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dodging makes you take no damage from attacks your opponent used this beat,
-    but you can't dodge two beats in a row
+  m_text: Dodging (Y) makes you take no damage from attacks your opponent used this
+    beat, but you can't dodge two beats in a row
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
   m_sharedMaterial: {fileID: 8670380814632873181, guid: 6e2ac238a7f62ab43996badcb0ef97ce, type: 2}
