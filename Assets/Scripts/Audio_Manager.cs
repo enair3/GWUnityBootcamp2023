@@ -8,6 +8,7 @@ public class Audio_Manager : MonoBehaviour
 
     public float volumeSet;
     public AudioSource[] allSounds;
+    public float maxSong;
     // Start is called before the first frame update
     void Start()
     {

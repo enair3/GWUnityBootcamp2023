@@ -52,7 +52,6 @@ public class NoteScroll : MonoBehaviour
             //Debug.Log("Play");
             if (musicStart.hasStarted == false)
             {
-                musicStart.testSong.Play();
                 musicStart.hasStarted = true;
                 Debug.Log("Play");
             }
