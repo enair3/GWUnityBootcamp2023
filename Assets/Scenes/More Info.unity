@@ -327,8 +327,8 @@ Canvas:
   m_GameObject: {fileID: 749381418}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 947604968}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -807,6 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 848c0d2842fbb4ad9b2585cc2698a5c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BGmusic: {fileID: 0}
   buttonClick: {fileID: 1374811511}
 --- !u!1001 &1242035744
 PrefabInstance:
